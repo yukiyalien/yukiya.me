@@ -1,0 +1,273 @@
+// 何でこんなもののソースコード観てるんですか
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/kyun.png">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://mastportal.info/library/intent/intent.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Sawarabi+Gothic&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media screen and (min-width: 400px) {
+
+            /*ウィンドウ幅が767px以上の場合に適用*/
+            div.page {
+                width: 400px;
+                margin: 0 auto;
+            }
+
+        }
+
+        @media screen and (max-width: 399px) {
+
+            .page {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            clear: both;
+            height: 25px;
+            text-align: center;
+            font-size: 0.8em;
+            background-color: #f2463d;
+
+            width: 100%;
+            background-color: #ffcf67;
+            background-image: repeating-linear-gradient(-45deg,
+                    #f9f9f9,
+                    #f9f9f9 10px,
+                    transparent 0,
+                    transparent 20px);
+        }
+
+        h1 {
+            color: #f2463d;
+        }
+
+        div.faq {
+            text-align: left;
+        }
+
+        div.faq>p {
+            font-size: 1.3em;
+            color: #2e3350;
+        }
+
+        iframe.mastodon-embed {
+            margin: 0 auto;
+        }
+
+        p {
+            color: #f2463d;
+            font-size: 18px;
+        }
+
+        p.caution {
+            margin-top: 20px;
+            color: #2e3350;
+            font-size: 0.9em;
+        }
+
+        p.copyright {
+            color: #186665;
+            font-size: 0.9em;
+        }
+
+        div.form {
+            margin: 0 auto;
+            width: auto;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .btns {
+            margin-top: 50px;
+        }
+
+        .sharebutton {
+            width: 270px;
+            display: block;
+            padding: 0.3em;
+            text-align: right;
+            text-decoration: none;
+            font-family: "Sawarabi Gothic", monospace;
+            border: 3px solid;
+            border-radius: 3px;
+            transition: 0.4s;
+            position: relative;
+            margin-top: 10px;
+            background-color: #d3c6b2;
+            margin: 0 auto;
+        }
+
+        .sharebutton>i {
+            background: transparent !important;
+            position: absolute;
+            top: 60%;
+            left: 5px;
+            margin-top: -0.5em;
+        }
+
+        .sharebutton.twitter {
+            color: #ffffff;
+            background-color: #1da1f2;
+            border-color: #1da1f2;
+        }
+
+        .sharebutton.mastodon {
+            color: #ffffff;
+            border-color: #2b90d9;
+
+        }
+
+        .sharebutton:hover {
+            border-color: #2e3350;
+            text-decoration: none;
+        }
+
+        .faq {
+            padding-top: 60px;
+        }
+
+        footer {
+            margin-top: 100px;
+            clear: both;
+            height: 70px;
+            text-align: center;
+            padding-top: 28px;
+            width: 100%;
+            background-color: #ffcf67;
+            background-image: repeating-linear-gradient(-45deg,
+                    #f9f9f9,
+                    #f9f9f9 10px,
+                    transparent 0,
+                    transparent 20px);
+        }
+    </style>
+
+    <meta property="og:url" content="https://yukiya.me/kyun" />
+    <meta property="og:title" content="隠しページ" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="インターネット帯域の無駄" />
+
+    <title>隠しページ</title>
+</head>
+
+<body>
+
+    <header></header>
+
+    <div class="page">
+        <h1>KyunKyun-Poster</h1>
+        <div class="form">
+            <p><textarea class="form-control" rows="4" id="copyTarget" onclick="this.select();"
+                    readonly>ゆ❤️き❤️や❤️きゅ〜っきゅっきゅｷｭｷｭｷｭｷｭｷｭｷｭCueCueCueCueキュンゆきやッキュｷｭｷｭﾝ❤️キュンッ❤️キュッキュッキュッ❤️ｷｭｷｭﾝ❤️</textarea>
+            </p>
+        </div>
+        <p><button class="btn btn-primary" onclick="copyToClipboard()">コピーする</button></p>
+
+        <script>
+            function copyToClipboard() {
+                var copyTarget = document.getElementById("copyTarget");
+                copyTarget.select();
+                document.execCommand("Copy");
+                alert("コピーしました : " + copyTarget.value);
+            }
+        </script>
+
+        <div class="btns">
+            <p><a class="sharebutton mastodon intent_mastodon"
+                    data-text="ゆ❤️き❤️や❤️きゅ〜っきゅっきゅｷｭｷｭｷｭｷｭｷｭｷｭCueCueCueCueキュンゆきやッキュｷｭｷｭﾝ❤️キュンッ❤️キュッキュッキュッ❤️ｷｭｷｭﾝ❤️%0A%23インターネット帯域の無駄"
+                    data-url="https://yukiya.me/kyun" style="background-color: #2b90d9; color: #ffffff;"
+                    onclick="window.open(this.href, '', 'width=500,height=400'); return false;"><i
+                        class="fab fa-mastodon fa-fw fa-lg"></i>Toot on Mastodon</a></p>
+
+            <p><a href="https://twitter.com/intent/tweet?text=ゆ❤️き❤️や❤️きゅ〜っきゅっきゅｷｭｷｭｷｭｷｭｷｭｷｭCueCueCueCueキュンゆきやッキュｷｭｷｭﾝ❤️キュンッ❤️キュッキュッキュッ❤️ｷｭｷｭﾝ❤️%0A%23インターネット帯域の無駄%0Ahttps://yukiya.me/kyun"
+                    onclick="window.open(this.href, '', 'width=500,height=400'); return false;"
+                    class="sharebutton twitter">
+                    <i class="fab fa-twitter fa-fw fa-lg"></i>Tweet on Twitter
+                </a></p>
+        </div>
+
+        <p class="caution">※節度を持ってお使いください。</p>
+
+        <div class="faq">
+            <h1>FAQ</h1>
+            <p>Q. What's this?</p>
+            <p>A.</p>
+
+        </div>
+        <p><iframe src="https://best-friends.chat/@rosylilly/104025230956577815/embed" class="mastodon-embed"
+                style="max-width: 100%; border: 0; margin: 0 auto;" width="400"
+                allowfullscreen="allowfullscreen"></iframe>
+            <script src="https://best-friends.chat/embed.js" async="async"></script>
+        </p>
+
+    </div>
+    <footer>
+        <p class="copyright">&copy;
+            <script>
+                var today = new Date();
+                var year = today.getFullYear();
+                document.write(year);
+            </script>
+            yukiyalien
+        </p>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</body>
+
+</html>
