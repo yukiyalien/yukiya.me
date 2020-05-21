@@ -51,8 +51,8 @@
 
   /*ウィンドウ幅が最大479pxまでの場合に適用*/
   .page {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   p.avatar {
