@@ -51,8 +51,8 @@
 
   /*ウィンドウ幅が最大479pxまでの場合に適用*/
   .page {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   p.avatar {
@@ -162,6 +162,34 @@ div.bio {
 div.eng-bio {
   padding-top: 12px;
   padding-bottom: 8px;
+}
+
+.nicodic {
+  color: #2e3350;
+}
+
+a.nicodic{
+  padding: 0 5px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, #f2463d 50%);
+  background-position: 0 0;
+  background-size: 200% auto;
+  transition: .3s;
+  text-decoration: none;
+}
+
+a.nicodic:hover{
+  background-position: -100% 0;
+  color: #fff;
+}
+
+i.nicodic {
+  margin-left: 5px;
+}
+
+img.nicodic {
+  padding-right: 5px;
+  width: 1em;
+  height: 1em;
 }
 
 div.contents {
