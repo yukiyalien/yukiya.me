@@ -1,0 +1,191 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+@media screen and (min-width: 767px) {
+
+  /*ウィンドウ幅が767px以上の場合に適用*/
+  .page {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .myname {
+    float: left;
+    margin-right: 15px;
+  }
+
+  .id {
+    clear: left;
+  }
+}
+
+@media screen and (max-width: 766px) {
+
+  /*ウィンドウ幅が最大767pxまでの場合に適用*/
+
+  .page {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  p.avatar {
+    text-align: center;
+  }
+
+  .myname {
+    text-align: center;
+  }
+
+  .engname {
+    text-align: center;
+  }
+
+  .id {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 479px) {
+
+  /*ウィンドウ幅が最大479pxまでの場合に適用*/
+  .page {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  p.avatar {
+    text-align: center;
+  }
+
+  .myname {
+    text-align: center;
+  }
+
+  .engname {
+    text-align: center;
+  }
+
+  .id {
+    text-align: center;
+  }
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+header {
+  clear: both;
+  height: 25px;
+  text-align: center;
+  font-size: 0.8em;
+  background-color: #f2463d;
+
+  width: 100%;
+  background-color: #ffcf67;
+  background-image: repeating-linear-gradient(-45deg,
+      #f9f9f9,
+      #f9f9f9 10px,
+      transparent 0,
+      transparent 20px);
+}
+
+img.avatar {
+  border: solid 2px #2e3350;
+  border-radius: 5%;
+  width: 130px;
+  height: 130px;
+  margin-top: 80px;
+}
+
+i.heading {
+  margin-right: 10px;
+}
+
+h1 {
+  font-family: "Ubuntu", "Sawarabi Gothic", sans-serif;
+  font-size: 1.8em;
+  color: #f2463d;
+}
+
+h2 {
+  font-family: "Ubuntu", "Sawarabi Gothic", sans-serif;
+  font-size: 1.3em;
+  color: #f2463d;
+}
+
+p {
+  font-family: "Sawarabi Gothic", sans-serif;
+  color: #2e3350;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+div.names {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+b.myname,
+b.engname {
+  padding-top: 0px;
+}
+
+.myname {
+  font-family: "Ubuntu", "Sawarabi Gothic", sans-serif;
+  font-size: 30px;
+  color: #f2463d;
+  margin-bottom: 0px;
+}
+
+.engname {
+  font-family: "Sawarabi Gothic", sans-serif;
+  font-size: 28px;
+  color: #186665;
+  margin-bottom: 0px;
+}
+
+.id {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  color: #2e3350;
+  clear: left;
+}
+
+div.bio {
+  margin-top: 30px;
+  font-size: 1.1em;
+}
+
+div.eng-bio {
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+
+div.contents {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+div.linkcategory {
+  margin-top: 30px;
+}
+
+
+footer {
+  margin-top: 100px;
+  clear: both;
+  height: 50px;
+  text-align: center;
+  font-size: 0.8em;
+  padding-top: 20px;
+  width: 100%;
+  background-color: #ffcf67;
+  background-image: repeating-linear-gradient(-45deg,
+      #f9f9f9,
+      #f9f9f9 10px,
+      transparent 0,
+      transparent 20px);
+}

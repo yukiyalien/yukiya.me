@@ -1,0 +1,62 @@
+.btn {
+  width: 300px;
+  display: block;
+  padding: 0.3em;
+  text-align: right;
+  text-decoration: none;
+  font-family: "Sawarabi Gothic", monospace;
+  border: 3px solid;
+  border-radius: 3px;
+  transition: 0.4s;
+  position: relative;
+  margin-top: 10px;
+  color: #2e3350;
+  background-color: #d3c6b2;
+  border-color: #d3c6b2;
+}
+
+.btn>i {
+  background: transparent !important;
+  position: absolute;
+  top: 60%;
+  left: 5px;
+  margin-top: -0.5em;
+}
+
+.btn.twitter {
+  color: #ffffff;
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+}
+
+.btn.github {
+  color: #fff;
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.btn.mastodon {
+  color: #ffffff;
+  background-color: #2b90d9;
+  border-color: #2b90d9;
+}
+
+.btn.discord {
+  color: #ffffff;
+  background-color: #7298da;
+  border-color: #7298da;
+}
+
+.btn.nowonair {
+  color: #ffffff;
+  background-color: #f2463d;
+  border-color: #f2463d;
+}
+
+.btn:hover {
+  border-color: #2e3350;
+}
+
+.btn.github:hover {
+  border-color: #888888;
+}
