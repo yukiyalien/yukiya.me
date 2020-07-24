@@ -31,8 +31,20 @@
 
 .btn.github {
   color: #fff;
-  background-color: #000000;
-  border-color: #000000;
+  background-color: #24292E;
+  border-color: #24292E;
+}
+
+.btn.keybase {
+  color: #FFFFFF;
+  background-color: #3663EA;
+  border-color: #3663EA;
+}
+
+.btn.niconico {
+  color: #ffffff;
+  background-color: #252525;
+  border-color: #252525;
 }
 
 .btn.mastodon {
@@ -51,6 +63,12 @@
   color: #ffffff;
   background-color: #f2463d;
   border-color: #f2463d;
+}
+
+.btn.kyash {
+  color: #FFFFFF;
+  background-color: #0D97FF;
+  border-color: #0D97FF;
 }
 
 .btn:hover {
