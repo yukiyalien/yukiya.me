@@ -133,6 +133,7 @@ b.engname {
   padding-top: 0px;
 }
 
+
 .myname {
   font-family: "Ubuntu", "Sawarabi Gothic", sans-serif;
   font-size: 30px;
@@ -155,7 +156,7 @@ b.engname {
 }
 
 div.bio {
-  margin-top: 30px;
+  margin-top: 15px;
   font-size: 1.1em;
 }
 
