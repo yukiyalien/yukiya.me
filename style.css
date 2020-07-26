@@ -202,6 +202,10 @@ div.contents {
   padding-bottom: 20px;
 }
 
+div.blank {
+  padding: 40px;
+}
+
 div.linkcategory {
   margin-top: 30px;
 }
