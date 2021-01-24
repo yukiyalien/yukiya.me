@@ -71,6 +71,12 @@
   border-color: #0D97FF;
 }
 
+.btn.booklog {
+  color: #FFFFFF;
+  background-color: #4EA6CC;
+  border-color: #4EA6CC;
+}
+
 .btn:hover {
   border-color: #2e3350;
 }
