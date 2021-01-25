@@ -23,55 +23,61 @@
   margin-top: -0.5em;
 }
 
-.btn.twitter {
+.btn.twitter:hover {
   color: #ffffff;
   background-color: #1da1f2;
   border-color: #1da1f2;
 }
 
-.btn.github {
+.btn.github:hover {
   color: #fff;
   background-color: #24292E;
   border-color: #24292E;
 }
 
-.btn.keybase {
+.btn.keybase:hover {
   color: #FFFFFF;
   background-color: #3663EA;
   border-color: #3663EA;
 }
 
-.btn.niconico {
+.btn.niconico:hover {
   color: #ffffff;
   background-color: #252525;
   border-color: #252525;
 }
 
-.btn.mastodon {
+.btn.mastodon:hover {
   color: #ffffff;
   background-color: #2b90d9;
   border-color: #2b90d9;
 }
 
-.btn.discord {
+.btn.misskey:hover {
+  color: #ffffff;
+  background-color: #86B300;
+  border-color: #86B300;
+}
+
+.btn.discord:hover {
   color: #ffffff;
   background-color: #7298da;
   border-color: #7298da;
 }
 
-.btn.nowonair {
+.btn.nowonair:hover {
   color: #ffffff;
   background-color: #f2463d;
   border-color: #f2463d;
 }
 
-.btn.kyash {
+.btn.kyash:hover {
   color: #FFFFFF;
   background-color: #0D97FF;
   border-color: #0D97FF;
 }
 
-.btn.booklog {
+.btn.booklog:hover {
   color: #FFFFFF;
   background-color: #4EA6CC;
   border-color: #4EA6CC;
@@ -79,8 +85,4 @@
 
 .btn:hover {
   border-color: #2e3350;
-}
-
-.btn.github:hover {
-  border-color: #888888;
 }
