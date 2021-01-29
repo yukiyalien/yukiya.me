@@ -59,6 +59,12 @@
   border-color: #86B300;
 }
 
+.btn.pixelfed:hover {
+  color: #ffffff;
+  background-color: #DC3545;
+  border-color: #DC3545;
+}
+
 .btn.discord:hover {
   color: #ffffff;
   background-color: #7298da;
