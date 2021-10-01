@@ -73,27 +73,13 @@
 }
 
 body {
-  background-color: #f2f2f2;
+  background-color: #f5f4f4;
 }
 
-header {
-  clear: both;
-  height: 25px;
-  text-align: center;
-  font-size: 0.8em;
-  background-color: #f2463d;
 
-  width: 100%;
-  background-color: #ffcf67;
-  background-image: repeating-linear-gradient(-45deg,
-      #f9f9f9,
-      #f9f9f9 10px,
-      transparent 0,
-      transparent 20px);
-}
 
 img.avatar {
-  border: solid 2px #2e3350;
+  border: solid 2px #e4e2e2;
   border-radius: 5%;
   width: 130px;
   height: 130px;
@@ -105,20 +91,20 @@ i.heading {
 }
 
 h1 {
-  font-family: "Ubuntu", "Sawarabi Gothic", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 1.8em;
-  color: #f2463d;
+  color: #e10728;
 }
 
 h2 {
-  font-family: "Ubuntu", "Sawarabi Gothic", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 1.3em;
-  color: #186665;
+  color: #371f23;
 }
 
 p {
-  font-family: "Sawarabi Gothic", sans-serif;
-  color: #2e3350;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #371f23;
   margin-top: 5px;
   margin-bottom: 15px;
 }
@@ -135,23 +121,16 @@ b.engname {
 
 
 .myname {
-  font-family: "Ubuntu", "Sawarabi Gothic", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 30px;
-  color: #f2463d;
-  margin-bottom: 0px;
-}
-
-.engname {
-  font-family: "Sawarabi Gothic", sans-serif;
-  font-size: 28px;
-  color: #186665;
+  color: #e10728;
   margin-bottom: 0px;
 }
 
 .id {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 20px;
-  color: #2e3350;
+  color: #605254;
   clear: left;
 }
 
@@ -166,7 +145,7 @@ div.eng-bio {
 }
 
 .nicodic {
-  color: #2e3350;
+  color: #371f23;
 }
 
 a.nicodic{
@@ -224,10 +203,4 @@ footer {
   font-size: 0.8em;
   padding-top: 20px;
   width: 100%;
-  background-color: #ffcf67;
-  background-image: repeating-linear-gradient(-45deg,
-      #f9f9f9,
-      #f9f9f9 10px,
-      transparent 0,
-      transparent 20px);
 }
