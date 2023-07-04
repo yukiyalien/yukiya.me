@@ -5,10 +5,3 @@
 ももつきゆきやのウェブサイトです
 
 Access!!→ [https://yukiya.me/](https://yukiya.me/)
-
-
-
-# SpecialThanks✨
-- [@cutls](https://github.com/cutls)
-- [@yuzulabo](https://github.com/yuzulabo)
-(敬称略・時系列順)
