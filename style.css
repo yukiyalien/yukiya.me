@@ -227,7 +227,12 @@ div.bio {
 
 a,a:visited{
   color: #c77658;
-  text-decoration: none;
+  text-decoration:none;
+}
+
+a:hover {
+  color: #EC5540;
+  text-decoration: underline;
 }
 
 
