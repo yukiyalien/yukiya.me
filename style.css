@@ -181,7 +181,7 @@ div.bio {
 	padding: .5em;
 	line-height: 1;
 	text-decoration: none;
-	color: #EC5540;
+	color: #c77658;
 	background-color: #fff;
 	border: 0px solid #EC5540;
 	border-radius: 2em;
@@ -190,23 +190,6 @@ div.bio {
 }
 .tags:before {
 	content: "#";	
-}
-
-.designed-list li {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-weight: 500;
-  color: #320001;
-  border-left: solid 6px #ec5540;
-  background: #ffffff;
-  margin-top: 5px;
-  margin-bottom: 5px;
-   line-height: 1.5;
-  padding: 0.5em;
-  border-radius: 4px;
-  list-style-type: none!important;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
-  word-break: keep-all;
-  overflow-wrap: break-word;
 }
 
 .social-accounts-icon {
@@ -254,3 +237,50 @@ footer {
   padding-top: 20px;
   width: 100%;
 }
+
+.designed-list li {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 500;
+  color: #320001;
+  border-left: solid 6px #c77658;
+  background: #ffffff;
+  margin-top: 5px;
+  margin-bottom: 5px;
+   line-height: 1.5;
+  padding: 0.5em;
+  border-radius: 4px;
+  list-style-type: none!important;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.designed-list li.li-mastodon {
+  border-left: solid 6px #6364FF;
+}
+
+.designed-list li.li-misskey {
+  border-left: solid 6px #8AB942;
+}
+
+.designed-list li.li-threads {
+  border-left: solid 6px #000;
+}
+
+.designed-list li.li-twitter {
+  border-left: solid 6px #1D9BF0;
+}
+
+.designed-list li.li-niconico {
+  border-left: solid 6px #252525;
+}
+
+.designed-list li.li-discord {
+  border-left: solid 6px #5865F2;
+}
+
+/*
+.designed-list li.li-bluesky {
+  border-left: solid 6px #0085FF;
+}
+*/
