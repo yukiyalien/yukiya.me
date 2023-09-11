@@ -279,6 +279,10 @@ footer {
   border-left: solid 6px #5865F2;
 }
 
+.designed-list li.li-marshmallow {
+  border-left: solid 6px #F3969A;
+}
+
 /*
 .designed-list li.li-bluesky {
   border-left: solid 6px #0085FF;
