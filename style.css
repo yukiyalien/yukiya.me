@@ -275,6 +275,18 @@ footer {
   border-left: solid 6px #252525;
 }
 
+.designed-list li.li-github {
+  border-left: solid 6px #171515;
+}
+
+.designed-list li.li-annict {
+  border-left: solid 6px #D51C5B;
+}
+
+.designed-list li.li-booklog {
+  border-left: solid 6px #4EA6CC;
+}
+
 .designed-list li.li-discord {
   border-left: solid 6px #5865F2;
 }
@@ -282,6 +294,7 @@ footer {
 .designed-list li.li-marshmallow {
   border-left: solid 6px #F3969A;
 }
+
 
 /*
 .designed-list li.li-bluesky {
