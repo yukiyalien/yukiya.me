@@ -154,13 +154,14 @@ div.names {
 }
 
 .id {
+  font-family: "M PLUS 1 Code", monospace;
   font-size: 20px;
   font-weight: 300;
   clear: left;
 }
 
-.monospace {
-
+.pronounce {
+  font-size: 15px;
 }
 
 .color-theme1 {
@@ -211,6 +212,8 @@ div.bio {
 a,a:visited{
   color: #c77658;
   text-decoration:none;
+  font-family: "M PLUS 1 Code", monospace;
+  font-weight: 500;
 }
 
 a:hover {
