@@ -20,13 +20,18 @@
     clear: left;
   }
 
-  .id {
+  .zokusei {
     clear: left;
   }
 
   .main-sns-links {
     clear: left;
   }
+
+  li.li-twitter {
+    margin-left: 0px !important;
+  }
+
 }
 
 @media screen and (max-width: 766px) {
@@ -54,7 +59,7 @@
     text-align: center;
   }
 
-  .id {
+  .zokusei {
     text-align: center;
   }
 
@@ -123,12 +128,13 @@ h1 {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 700;
   color: #EC5540;
+  font-size: 2rem;
 }
 
 h2 {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.6rem;
   color: #320001;
   margin-top: 20px;
   margin-bottom: 5px;
@@ -138,6 +144,7 @@ p {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   color: #320001;
   font-weight: 500;
+  font-size: 1.2rem;
 }
 
 div.names {
@@ -149,19 +156,30 @@ div.names {
 }
 
 .myname {
-  font-size: 30px;
+font-size: 2.6rem;
   font-weight: 700;
 }
 
 .id {
-  font-family: "M PLUS 1 Code", monospace;
-  font-size: 20px;
-  font-weight: 300;
+  font-weight: 900;
+  font-size: 0.8rem;
+  display: inline-block;
+	margin: 0 .4em .6em 0;
+	padding: .5em;
+	line-height: 1;
+	color: #EC5540;
+	background-color: #fff;
+	border: 0px solid #EC5540;
+	border-radius: 2em;
+}
+
+.zokusei {
+  padding-top: 0px;
   clear: left;
 }
 
 .pronounce {
-  font-size: 15px;
+ margin-right: 0px;
 }
 
 .color-theme1 {
@@ -198,8 +216,8 @@ div.bio {
 }
 
 .social-accounts {
-  margin:1em 0;
-  list-style:none;
+  padding-top: 10px;
+  list-style: none;
 }
 
 .social-accounts li {
@@ -212,13 +230,14 @@ div.bio {
 a,a:visited{
   color: #c77658;
   text-decoration:none;
-  font-family: "M PLUS 1 Code", monospace;
   font-weight: 500;
+  text-decoration: underline dotted #FFE0AA 0.3ex;
+  text-underline-offset: 0.6ex;
 }
 
 a:hover {
   color: #EC5540;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 
@@ -242,60 +261,74 @@ footer {
 }
 
 .designed-list li {
+  font-size: 1.2rem;
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   color: #320001;
-  border-left: solid 6px #c77658;
+  border-left: solid 8px #FFE0AA;
   background: #ffffff;
-  margin-top: 5px;
-  margin-bottom: 5px;
-   line-height: 1.5;
+  margin-top: 8px;
+  margin-bottom: px;
+  line-height: 1.4rem;
   padding: 0.5em;
-  border-radius: 4px;
+  border-radius: 8px;
   list-style-type: none!important;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
   word-break: keep-all;
   overflow-wrap: break-word;
+  
+}
+
+.designed-list li > a {
+  font-size: 1rem;
 }
 
 .designed-list li.li-mastodon {
-  border-left: solid 6px #6364FF;
+  border-left: solid 8px #6364FF;
 }
 
 .designed-list li.li-misskey {
-  border-left: solid 6px #8AB942;
+  border-left: solid 8px #8AB942;
 }
 
 .designed-list li.li-threads {
-  border-left: solid 6px #000;
+  border-left: solid 8px #000;
 }
 
 .designed-list li.li-twitter {
-  border-left: solid 6px #1D9BF0;
+  border-left: solid 8px #1D9BF0;
+}
+
+.designed-list li.li-bluesky {
+  border-left: solid 8px #0A7AFF;
 }
 
 .designed-list li.li-niconico {
-  border-left: solid 6px #252525;
+  border-left: solid 8px #252525;
+}
+
+.designed-list li.li-note {
+  border-left: solid 8px #000;
 }
 
 .designed-list li.li-github {
-  border-left: solid 6px #171515;
+  border-left: solid 8px #171515;
 }
 
 .designed-list li.li-annict {
-  border-left: solid 6px #D51C5B;
+  border-left: solid 8px #D51C5B;
 }
 
 .designed-list li.li-booklog {
-  border-left: solid 6px #4EA6CC;
+  border-left: solid 8px #4EA6CC;
 }
 
 .designed-list li.li-discord {
-  border-left: solid 6px #5865F2;
+  border-left: solid 8px #5865F2;
 }
 
 .designed-list li.li-marshmallow {
-  border-left: solid 6px #F3969A;
+  border-left: solid 8px #F3969A;
 }
 
 
