@@ -14,7 +14,7 @@
   --line: #FFE0AA;
   --shadow-soft: 0 6px 20px rgba(50, 0, 1, 0.08);
   --shadow-card: 0 12px 32px rgba(50, 0, 1, 0.08);
-  --radius-large: 24px;
+  --radius-large: 32px;
   --radius-medium: 16px;
   --radius-pill: 999px;
 }
