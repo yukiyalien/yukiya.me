@@ -252,37 +252,96 @@ a:focus-visible {
   background: #fff;
   margin-top: 10px;
   line-height: 1.5;
-  padding: 0.8em 0.9em;
+  padding: 0;
   border-radius: 8px;
   list-style-type: none;
   box-shadow: 0 4px 14px rgba(50, 0, 1, 0.06);
   word-break: keep-all;
   overflow-wrap: break-word;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.designed-list li:hover,
+.designed-list li:focus-within {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(50, 0, 1, 0.1);
 }
 
 .designed-list li > a {
-  display: inline-block;
-  margin-top: 2px;
-  font-size: 0.98rem;
+  display: block;
+  padding: 0.8em 0.9em;
+  border-radius: 8px;
+  color: var(--text);
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
 }
 
-.copy-text-btn {
+.designed-list li > a:visited,
+.designed-list li > a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.designed-list li > a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.designed-list li > a .link-sub {
+  display: inline-block;
   margin-top: 2px;
-  padding: 0;
-  border: 0;
-  background: transparent;
   color: var(--sub);
   font-size: 0.98rem;
   font-weight: 500;
+}
+
+.designed-list li > a:hover .link-sub {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.designed-list li.li-no-link {
+  padding: 0;
+}
+
+.copy-text-btn {
+  display: block;
+  width: 100%;
+  padding: 0.8em 0.9em;
+  border-radius: 8px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  color: var(--text);
+  font-size: inherit;
+  font-weight: inherit;
   font-family: inherit;
-  text-decoration: underline dotted var(--line) 0.24em;
-  text-underline-offset: 0.22em;
+  line-height: 1.5;
+  text-decoration: none;
   cursor: pointer;
 }
 
+.copy-text-btn .link-sub {
+  display: inline-block;
+  margin-top: 2px;
+  color: var(--sub);
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
 .copy-text-btn:hover {
-  color: var(--accent);
+  color: var(--text);
   text-decoration: none;
+}
+
+.copy-text-btn:hover .link-sub {
+  color: var(--accent);
+}
+
+.copy-text-btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .designed-list li.li-togenkyoworks {
@@ -400,10 +459,15 @@ footer {
 
   .designed-list li {
     font-size: 1rem;
+  }
+
+  .designed-list li > a,
+  .copy-text-btn {
     padding: 0.75em 0.8em;
   }
 
-  .designed-list li > a {
+  .designed-list li > a .link-sub,
+  .copy-text-btn .link-sub {
     font-size: 0.94rem;
   }
 }
