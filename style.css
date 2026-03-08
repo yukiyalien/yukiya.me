@@ -248,12 +248,12 @@ a:focus-visible {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 700;
   color: var(--text);
-  border-left: solid 15px var(--line);
+  border-left: solid 8px var(--line);
   background: #fff;
   margin-top: 10px;
   line-height: 1.5;
   padding: 0.8em 0.9em;
-  border-radius: 14px;
+  border-radius: 8px;
   list-style-type: none;
   box-shadow: 0 4px 14px rgba(50, 0, 1, 0.06);
   word-break: keep-all;
