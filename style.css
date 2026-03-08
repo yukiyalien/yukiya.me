@@ -396,6 +396,18 @@ a:focus-visible {
   border-left-color: #F3969A;
 }
 
+@media screen and (min-width: 900px) {
+  .contents:not([aria-labelledby="works-heading"]) .designed-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 12px;
+  }
+
+  .contents:not([aria-labelledby="works-heading"]) .designed-list li {
+    margin-top: 0;
+  }
+}
+
 footer {
   margin-top: 56px;
   text-align: center;
