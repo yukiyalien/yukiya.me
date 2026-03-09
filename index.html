@@ -47,7 +47,7 @@
         <span class="menu-toggle-icon" aria-hidden="true"></span>
         <span class="menu-toggle-label">Menu</span>
       </button>
-      <ul id="site-menu-list" class="section-menu-list" hidden>
+      <ul id="site-menu-list" class="section-menu-list">
         <li><a href="#about">About</a></li>
         <li><a href="#interests">Interests</a></li>
         <li><a href="#works">Works</a></li>
@@ -346,13 +346,11 @@
         const closeMenu = () => {
           sectionMenu.classList.remove("is-open");
           menuToggle.setAttribute("aria-expanded", "false");
-          menuList.hidden = true;
         };
 
         menuToggle.addEventListener("click", () => {
           const isOpen = sectionMenu.classList.toggle("is-open");
           menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-          menuList.hidden = !isOpen;
         });
 
         menuList.querySelectorAll("a").forEach((link) => {

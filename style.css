@@ -170,6 +170,7 @@ img.avatar {
   margin-top: 0;
   margin-bottom: 14px;
   width: 100%;
+  pointer-events: none;
 }
 
 .menu-toggle {
@@ -188,6 +189,7 @@ img.avatar {
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(50, 0, 1, 0.05);
   transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  pointer-events: auto;
 }
 
 .menu-toggle:hover {
@@ -240,10 +242,11 @@ img.avatar {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-
-.section-menu-list[hidden] {
-  display: none !important;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-6px);
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
 }
 
 .section-menu-list a {
@@ -271,6 +274,13 @@ img.avatar {
 .section-menu.is-open .menu-toggle {
   border-color: var(--accent);
   background-color: #fff;
+}
+
+.section-menu.is-open .section-menu-list {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
 }
 
 .contents {
