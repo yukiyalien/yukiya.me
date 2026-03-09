@@ -178,6 +178,7 @@ img.avatar {
   align-items: center;
   gap: 10px;
   padding: 0.55em 0.9em;
+  min-height: 44px;
   border: 1px solid rgba(199, 118, 88, 0.35);
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.9);
@@ -190,6 +191,7 @@ img.avatar {
   box-shadow: 0 2px 8px rgba(50, 0, 1, 0.05);
   transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
   pointer-events: auto;
+  touch-action: manipulation;
 }
 
 .menu-toggle:hover {
