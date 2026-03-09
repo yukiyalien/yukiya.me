@@ -42,6 +42,21 @@
 </head>
 <body>
   <div class="page">
+    <nav class="section-menu" aria-label="ページ内目次">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu-list">
+        <span class="menu-toggle-icon" aria-hidden="true"></span>
+        <span class="menu-toggle-label">Menu</span>
+      </button>
+      <ul id="site-menu-list" class="section-menu-list" hidden>
+        <li><a href="#about">About</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#support">Support</a></li>
+      </ul>
+    </nav>
+
     <header class="hero">
       <div class="hero-avatar">
         <p class="avatar-wrap">
@@ -94,15 +109,15 @@
     </header>
 
     <main>
-      <section class="contents bio" aria-labelledby="about-heading">
-        <h2 id="about-heading">About</h2>
+      <section class="contents bio" aria-labelledby="about">
+        <h2 id="about">About</h2>
         <p>インターネットオタク。同人サークル「モモツキ桃源郷」主宰・ポッドキャスター。千葉出身・東京在住の会社員。</p>
         <p>ネット文化・Webサービスや同人・サブカルチャーを中心に、評論同人誌やポッドキャストなどを制作・発信しています。</p>
         <p>趣味・特技はインターネット。</p>
       </section>
 
-      <section class="contents bio" aria-labelledby="interests-heading">
-        <h2 id="interests-heading">Interests</h2>
+      <section class="contents bio" aria-labelledby="interests">
+        <h2 id="interests">Interests</h2>
         <p>
           <span class="tags">インターネット</span>
           <span class="tags">ニコニコ</span>
@@ -123,8 +138,8 @@
         </p>
       </section>
 
-      <section class="contents bio" aria-labelledby="works-heading">
-        <h2 id="works-heading">Works</h2>
+      <section class="contents bio" aria-labelledby="works">
+        <h2 id="works">Works</h2>
 
         <h3>同人誌</h3>
         <p>Webサービスやネット文化など、自分が好きなインターネットについて取り上げた同人誌を作っています。</p>
@@ -160,8 +175,8 @@
         </ul>
       </section>
 
-      <section class="contents bio" aria-labelledby="links-heading">
-        <h2 id="links-heading">Links</h2>
+      <section class="contents bio" aria-labelledby="links">
+        <h2 id="links">Links</h2>
 
         <h3>Featured</h3>
         <ul class="designed-list">
@@ -272,8 +287,8 @@
         </ul>
       </section>
 
-      <section class="contents bio" aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Contact</h2>
+      <section class="contents bio" aria-labelledby="contact">
+        <h2 id="contact">Contact</h2>
         <p>メール、MastodonやTwitterでのメンション・メッセージ、またはDiscordなどからお気軽にお問い合わせください。</p>
         <ul class="designed-list">
           <li class="togenkyoworks">
@@ -297,8 +312,8 @@
         </ul>
       </section>
 
-      <section class="contents bio" aria-labelledby="donate-heading">
-        <h2 id="donate-heading">Support</h2>
+      <section class="contents bio" aria-labelledby="support">
+        <h2 id="support">Support</h2>
         <ul class="designed-list">
           <li class="togenkyoworks">
             <a href="https://creator-support.nicovideo.jp/registration/53649713" target="_blank" rel="noopener noreferrer">
@@ -322,7 +337,42 @@
   </div>
   <script>
     (() => {
+      const sectionMenu = document.querySelector(".section-menu");
+      const menuToggle = sectionMenu ? sectionMenu.querySelector(".menu-toggle") : null;
+      const menuList = sectionMenu ? sectionMenu.querySelector(".section-menu-list") : null;
       const copyButtons = document.querySelectorAll("[data-copy-text]");
+
+      if (sectionMenu && menuToggle && menuList) {
+        const closeMenu = () => {
+          sectionMenu.classList.remove("is-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuList.hidden = true;
+        };
+
+        menuToggle.addEventListener("click", () => {
+          const isOpen = sectionMenu.classList.toggle("is-open");
+          menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          menuList.hidden = !isOpen;
+        });
+
+        menuList.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!sectionMenu.contains(event.target)) {
+            closeMenu();
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            closeMenu();
+          }
+        });
+
+        closeMenu();
+      }
 
       const copyText = async (text) => {
         if (navigator.clipboard && navigator.clipboard.writeText) {
