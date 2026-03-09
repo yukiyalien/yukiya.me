@@ -21,11 +21,16 @@
 
 html {
   scroll-behavior: smooth;
+  background:
+    radial-gradient(circle at top left, #fff7e6 0%, #fef6df 45%, #f9efd8 100%);
+  background-color: var(--bg);
 }
 
 body {
+  min-height: 100dvh;
   background:
     radial-gradient(circle at top left, #fff7e6 0%, #fef6df 45%, #f9efd8 100%);
+  background-color: var(--bg);
   color: var(--text);
   font-family: "M PLUS Rounded 1c", sans-serif;
   line-height: 1.7;
