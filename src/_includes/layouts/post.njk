@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} - ももつきゆきや</title>
+  <meta name="description" content="{{ description or 'ももつきゆきやのブログ記事' }}">
+
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FEF6DF">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FEF6DF">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1F1A17">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ももつきゆきや">
+  <meta property="og:title" content="{{ title }} - ももつきゆきや">
+  <meta property="og:description" content="{{ description or 'ももつきゆきやのブログ記事' }}">
+  <meta property="og:url" content="https://yukiya.me{{ page.url }}">
+  <meta property="og:image" content="https://yukiya.me/icon.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  {% include "site-header.njk" %}
+  <div class="page page-post">
+    <main>
+      <article class="contents bio">
+        <header class="post-header">
+          <div class="post-header-main">
+            <div class="post-header-icon">
+              <img src="/icon.jpg" alt="Yukiya Momotsuki" class="post-icon-img">
+            </div>
+            <div class="post-header-text">
+              <nav class="post-breadcrumb" aria-label="パンくずリスト">
+                <a href="/">yukiya.me</a>
+                <span aria-hidden="true">›</span>
+                <a href="/blog/">blog</a>
+                <span aria-hidden="true">›</span>
+                <span aria-current="page">{{ page.fileSlug }}</span>
+              </nav>
+              <h1 class="post-title">{{ title }}</h1>
+              {% if date %}
+              <p class="post-meta">
+                <time datetime="{{ date | jpDate }}">{{ date | jpDate }}</time>
+              </p>
+              {% endif %}
+            </div>
+          </div>
+        </header>
+
+        <section class="post-body">
+          {{ content | safe }}
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2019 Yukiya Momotsuki</p>
+    </footer>
+  </div>
+</body>
+</html>
+

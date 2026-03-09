@@ -1,0 +1,14 @@
+{
+  "name": "yukiya-me-site",
+  "version": "1.0.0",
+  "description": "Portfolio site and simple blog for Yukiya Momotsuki (Eleventy-powered).",
+  "private": true,
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "dev": "npx @11ty/eleventy --serve --port=8080",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

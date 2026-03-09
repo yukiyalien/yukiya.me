@@ -1,0 +1,93 @@
+---
+pagination:
+  data: collections.posts
+  size: 20
+  alias: posts
+permalink: "blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブログ - ももつきゆきや</title>
+  <meta name="description" content="ももつきゆきやの簡易ブログ。インターネットや同人、ガジェットなどのメモ。">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  {% include "site-header.njk" %}
+  <div class="page page-blog">
+    <main>
+      <section class="contents bio">
+        <header class="blog-index-header">
+          <div class="blog-index-header-main">
+            <div class="blog-index-header-icon">
+              <img src="/icon.jpg" alt="Yukiya Momotsuki" class="post-icon-img">
+            </div>
+            <div class="blog-index-header-text">
+              <nav class="post-breadcrumb" aria-label="パンくずリスト">
+                <a href="/">yukiya.me</a>
+                <span aria-hidden="true">›</span>
+                <span aria-current="page">blog</span>
+              </nav>
+              <h1 class="blog-index-title">blog</h1>
+            </div>
+          </div>
+        </header>
+
+        {% if posts and posts.length %}
+        <ul class="blog-index-list">
+          {% for post in posts | reverse %}
+          <li class="blog-index-item">
+            <div class="blog-index-item-date">
+              <time datetime="{{ post.date }}">{{ post.date | jpDateShort }}</time>
+            </div>
+            <div class="blog-index-item-body">
+              <a href="{{ post.url }}" class="blog-index-item-title">{{ post.data.title }}</a>
+              <p class="blog-index-item-excerpt">
+                {{ post.data.description or (post.templateContent | excerpt(120)) }}
+              </p>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p>まだブログ記事はありません。</p>
+        {% endif %}
+
+        {% if pagination.hrefs.length > 1 %}
+        <nav class="pagination" aria-label="ページネーション">
+          <p class="pagination-label">{{ pagination.pageNumber + 1 }} / {{ pagination.hrefs.length }} ページ</p>
+          <div class="pagination-inner">
+            {% if pagination.previousPageHref %}
+            <a href="{{ pagination.previousPageHref }}" class="pagination-link pagination-prev">前へ</a>
+            {% endif %}
+            <ol class="pagination-list">
+              {% for href in pagination.hrefs %}
+              <li class="pagination-item">
+                {% if loop.index - 1 == pagination.pageNumber %}
+                <span class="pagination-current" aria-current="page">{{ loop.index }}</span>
+                {% else %}
+                <a href="{{ href }}" class="pagination-link">{{ loop.index }}</a>
+                {% endif %}
+              </li>
+              {% endfor %}
+            </ol>
+            {% if pagination.nextPageHref %}
+            <a href="{{ pagination.nextPageHref }}" class="pagination-link pagination-next">次へ</a>
+            {% endif %}
+          </div>
+        </nav>
+        {% endif %}
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2019 Yukiya Momotsuki</p>
+    </footer>
+  </div>
+</body>
+</html>
