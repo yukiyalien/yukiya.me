@@ -858,7 +858,8 @@ footer {
   min-width: 0;
 }
 
-.blog-index-item-title {
+.blog-index-item-title,
+.blog-index-item-title:visited {
   display: block;
   font-size: 1.1rem;
   font-weight: 700;
