@@ -193,7 +193,6 @@ img.avatar {
 }
 
 .menu-toggle:hover {
-  transform: translateY(-1px);
   border-color: var(--accent);
   background-color: #fff;
   box-shadow: 0 8px 18px rgba(50, 0, 1, 0.08);
@@ -205,22 +204,31 @@ img.avatar {
 }
 
 .menu-toggle-icon {
-  position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 18px;
-  height: 12px;
-  border-top: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
+  height: 18px;
 }
 
-.menu-toggle-icon::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  border-top: 2px solid currentColor;
-  transform: translateY(-50%);
+.menu-toggle-icon svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  fill: currentColor;
+  transition: opacity 0.2s ease;
+}
+
+.menu-toggle-icon svg.menu-toggle-icon-close {
+  display: none;
+}
+
+.section-menu.is-open .menu-toggle-icon svg.menu-toggle-icon-open {
+  display: none;
+}
+
+.section-menu.is-open .menu-toggle-icon svg.menu-toggle-icon-close {
+  display: block;
 }
 
 .menu-toggle-label {
