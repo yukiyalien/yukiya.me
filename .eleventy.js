@@ -6,7 +6,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("404.html");
   eleventyConfig.addPassthroughCopy("CNAME");
-  eleventyConfig.addPassthroughCopy("waybackverify.txt");
   eleventyConfig.addPassthroughCopy("img");
 
   eleventyConfig.addCollection("posts", (collectionApi) => {
