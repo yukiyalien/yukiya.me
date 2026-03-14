@@ -1,6 +1,8 @@
 const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addGlobalData("currentYear", () => new Date().getFullYear());
+
   eleventyConfig.addPassthroughCopy("style.css");
   eleventyConfig.addPassthroughCopy("icon.jpg");
   eleventyConfig.addPassthroughCopy("favicon.ico");
