@@ -1,7 +1,7 @@
 ---
 title: ブログをVibe Codingで作ってみた
 description: 自分のポートフォリオサイト内に、簡単なブログ機能を作ってみました。これは記念すべき最初の記事です！
-date: 2026-03-10
+date: 2026-03-10T00:00+09:00
 permalink: /blog/hello-my-blog/
 layout: layouts/post.njk
 tags:

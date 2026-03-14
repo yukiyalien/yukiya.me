@@ -17,8 +17,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("jpDate", (dateObj) => {
     if (!dateObj) return "";
 
-    // Eleventy は JS Date を渡してくるので JST に変換してから整形
-    const dt = DateTime.fromJSDate(dateObj, { zone: "Asia/Tokyo" });
+    const dt =
+      typeof dateObj === "string"
+        ? DateTime.fromISO(dateObj).setZone("Asia/Tokyo")
+        : DateTime.fromJSDate(dateObj, { zone: "Asia/Tokyo" });
     if (!dt.isValid) return "";
 
     return dt.toFormat("yyyy-LL-dd (ccc) HH:mm");
@@ -26,7 +28,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("jpDateShort", (dateObj) => {
     if (!dateObj) return "";
-    const dt = DateTime.fromJSDate(dateObj, { zone: "Asia/Tokyo" });
+    const dt =
+      typeof dateObj === "string"
+        ? DateTime.fromISO(dateObj).setZone("Asia/Tokyo")
+        : DateTime.fromJSDate(dateObj, { zone: "Asia/Tokyo" });
     if (!dt.isValid) return "";
     return dt.toFormat("yyyy-LL-dd (ccc)");
   });
