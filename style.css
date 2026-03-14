@@ -890,11 +890,6 @@ footer {
   display: none;
 }
 
-.post-share-icon-misskey {
-  width: 0.95em;
-  height: 0.95em;
-}
-
 /* Blog index page */
 .blog-index-header {
   margin-bottom: 24px;
