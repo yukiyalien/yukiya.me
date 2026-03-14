@@ -711,6 +711,8 @@ footer {
 
 .post-body {
   margin-top: 18px;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .post-body p + p {
@@ -724,6 +726,23 @@ footer {
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(236, 85, 64, 0.15);
+}
+
+.post-body pre {
+  white-space: pre;
+  max-width: 100%;
+  padding: 0.75em 1em;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(236, 85, 64, 0.15);
+}
+
+.post-body pre code {
+  padding: 0;
+  display: block;
+  overflow-x: auto;
+  background: transparent;
+  border: none;
 }
 
 .post-body h2,
