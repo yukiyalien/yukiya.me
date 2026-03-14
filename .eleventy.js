@@ -36,6 +36,10 @@ module.exports = function (eleventyConfig) {
     return text.slice(0, maxLength) + "…";
   });
 
+  eleventyConfig.addFilter("urlEncode", (str) =>
+    encodeURIComponent(str != null ? String(str) : "")
+  );
+
   return {
     dir: {
       input: "src",

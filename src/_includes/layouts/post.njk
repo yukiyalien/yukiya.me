@@ -55,9 +55,55 @@
           </div>
         </header>
 
+        {% set fullUrl = 'https://yukiya.me' + page.url %}
+        {% set shareText = title + ' ' + fullUrl %}
+        {% include "post-share.njk" %}
+
         <section class="post-body">
           {{ content | safe }}
         </section>
+
+        {% include "post-share.njk" %}
+        <script>
+          (function () {
+            var sections = document.querySelectorAll('.post-share');
+            sections.forEach(function (section) {
+              var title = section.dataset.shareTitle || '';
+              var url = section.dataset.shareUrl || '';
+              var nativeBtn = section.querySelector('.post-share-native');
+              var copyBtn = section.querySelector('.post-share-copy');
+              if (nativeBtn) {
+                if (typeof navigator !== 'undefined' && navigator.share) {
+                  nativeBtn.addEventListener('click', function () {
+                    navigator.share({ title: title, text: title, url: url }).catch(function () {});
+                  });
+                } else {
+                  nativeBtn.style.display = 'none';
+                }
+              }
+              if (copyBtn) {
+                var copyIcon = copyBtn.querySelector('.post-share-icon-copy');
+                var doneIcon = copyBtn.querySelector('.post-share-icon-done');
+                var defaultLabel = copyBtn.getAttribute('aria-label');
+                copyBtn.addEventListener('click', function () {
+                  var text = title + '\n' + url;
+                  if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(text).then(function () {
+                      copyBtn.setAttribute('aria-label', 'コピーしました');
+                      if (copyIcon) copyIcon.hidden = true;
+                      if (doneIcon) doneIcon.hidden = false;
+                      setTimeout(function () {
+                        copyBtn.setAttribute('aria-label', defaultLabel || '');
+                        if (copyIcon) copyIcon.hidden = false;
+                        if (doneIcon) doneIcon.hidden = true;
+                      }, 2000);
+                    }).catch(function () {});
+                  }
+                });
+              }
+            });
+          })();
+        </script>
       </article>
     </main>
 
