@@ -47,6 +47,13 @@ module.exports = function (eleventyConfig) {
     encodeURIComponent(str != null ? String(str) : "")
   );
 
+  /** パスから最後のセグメント（スラグ）を取得。パンくずの現在ページ表示用 */
+  eleventyConfig.addFilter("pathSlug", (url) => {
+    if (!url || typeof url !== "string") return "";
+    const segments = url.replace(/\/+$/, "").split("/").filter(Boolean);
+    return segments[segments.length - 1] || "";
+  });
+
   return {
     dir: {
       input: "src",

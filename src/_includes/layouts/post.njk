@@ -44,7 +44,7 @@
                 <span aria-hidden="true">›</span>
                 <a href="/blog/">blog</a>
                 <span aria-hidden="true">›</span>
-                <span aria-current="page">{{ page.fileSlug }}</span>
+                <span aria-current="page">{{ page.url | pathSlug }}</span>
               </nav>
               <h1 class="post-title">{{ title }}</h1>
               {% if date %}
