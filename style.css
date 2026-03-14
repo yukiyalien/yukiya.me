@@ -51,15 +51,16 @@ body {
   gap: 1.5em;
 }
 
-.site-header-logo {
+.site-header-logo,
+.site-header-logo:visited {
   font-size: 1.05rem;
   font-weight: 800;
-  color: var(--accent);
+  color: var(--sub);
   text-decoration: none;
 }
 
 .site-header-logo:hover {
-  color: var(--text);
+  color: var(--accent);
   text-decoration: none;
 }
 
